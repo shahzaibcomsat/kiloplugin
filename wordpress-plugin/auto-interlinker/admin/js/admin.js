@@ -83,6 +83,35 @@
     });
 
     // =========================================================
+    // Strip All Links
+    // =========================================================
+
+    $('#ai-strip-all-links').on('click', function () {
+        if (!confirm(AI.strings.confirmStrip)) {
+            return;
+        }
+
+        var $btn    = $(this);
+        var $status = $('#ai-strip-status');
+
+        $btn.prop('disabled', true).text(AI.strings.processing);
+        setStatus($status, AI.strings.processing, '');
+
+        ajaxRequest(
+            'ai_strip_all_links',
+            {},
+            function (data) {
+                $btn.prop('disabled', false).html('<span class="dashicons dashicons-trash"></span> Remove All Interlinks');
+                setStatus($status, data.message, 'success');
+            },
+            function (msg) {
+                $btn.prop('disabled', false).html('<span class="dashicons dashicons-trash"></span> Remove All Interlinks');
+                setStatus($status, msg, 'error');
+            }
+        );
+    });
+
+    // =========================================================
     // Process Single Post
     // =========================================================
 

@@ -312,6 +312,54 @@
 }
 
 /* =========================================================
+   Danger Button
+   ========================================================= */
+.ai-btn-danger {
+    color: #b91c1c !important;
+    border-color: #b91c1c !important;
+}
+
+.ai-btn-danger:hover {
+    background: #fee2e2 !important;
+    color: #991b1b !important;
+    border-color: #991b1b !important;
+}
+
+/* =========================================================
+   Action Row
+   ========================================================= */
+.ai-action-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+/* =========================================================
+   Divider
+   ========================================================= */
+.ai-divider {
+    border: none;
+    border-top: 1px solid #e2e8f0;
+    margin: 16px 0;
+}
+
+/* =========================================================
+   Info Card / Steps
+   ========================================================= */
+.ai-info-card {
+    background: #eff6ff;
+    border-left: 4px solid #2271b1;
+}
+
+.ai-steps {
+    margin: 0;
+    padding-left: 20px;
+    color: #374151;
+    line-height: 1.8;
+}
+
+/* =========================================================
    Responsive
    ========================================================= */
 @media (max-width: 782px) {
